@@ -104,14 +104,14 @@ class _ItemDetailsState extends State<ItemDetails> {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // product avaliable colors
-          TextWidget(
+          const TextWidget(
             text: 'Colors',
             fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Row(
             children: List.generate(
               widget.product.colors.length,
@@ -123,7 +123,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                     });
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 300),
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
@@ -136,8 +136,9 @@ class _ItemDetailsState extends State<ItemDetails> {
                               color: widget.product.colors[index], width: 2.0)
                           : null,
                     ),
-                    padding: currentColor == index ? EdgeInsets.all(4) : null,
-                    margin: EdgeInsets.only(right: 10),
+                    padding:
+                        currentColor == index ? const EdgeInsets.all(4) : null,
+                    margin: const EdgeInsets.only(right: 10),
                     child: Container(
                       decoration: BoxDecoration(
                         color: widget.product.colors[index],
@@ -150,7 +151,7 @@ class _ItemDetailsState extends State<ItemDetails> {
             ),
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
 
           // Description part
           DefaultTabController(
@@ -160,17 +161,17 @@ class _ItemDetailsState extends State<ItemDetails> {
               children: [
                 TabBar(
                   dividerColor: Colors.transparent,
-                  labelPadding: EdgeInsets.only(right: 7),
+                  labelPadding: const EdgeInsets.only(right: 7),
                   indicator: BoxDecoration(
                     color: kprimaryColor,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  labelStyle: TextStyle(
+                  unselectedLabelStyle: const TextStyle(color: Colors.white),
+                  labelStyle: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                   ),
-                  unselectedLabelStyle: TextStyle(color: Colors.black),
                   tabs: [
                     Tab(
                       child: Container(
@@ -179,8 +180,10 @@ class _ItemDetailsState extends State<ItemDetails> {
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(color: kprimaryColor),
                         ),
-                        child: Center(
-                          child: TextWidget(text: 'Description'),
+                        child: const Center(
+                          child: TextWidget(
+                            text: 'Description',
+                          ),
                         ),
                       ),
                     ),
@@ -190,7 +193,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             border: Border.all(color: kprimaryColor)),
-                        child: Center(
+                        child: const Center(
                           child: TextWidget(text: 'Specifications'),
                         ),
                       ),
@@ -201,14 +204,14 @@ class _ItemDetailsState extends State<ItemDetails> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             border: Border.all(color: kprimaryColor)),
-                        child: Center(
+                        child: const Center(
                           child: TextWidget(text: 'Reviews'),
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 300,
                   child: TabBarView(
@@ -216,10 +219,10 @@ class _ItemDetailsState extends State<ItemDetails> {
                       TextWidget(
                         text: widget.product.description,
                       ),
-                      TextWidget(
+                      const TextWidget(
                         text: 'Specification details',
                       ),
-                      TextWidget(
+                      const TextWidget(
                         text: 'All Reviews',
                       )
                     ],

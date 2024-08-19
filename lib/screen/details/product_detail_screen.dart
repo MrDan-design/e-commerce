@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/details/widgets/detail_image_slider.dart';
 import 'package:flutter_application_1/screen/details/widgets/detail_page_appBar.dart';
 import 'package:flutter_application_1/screen/details/widgets/item_details.dart';
-import 'package:flutter_application_1/widgets/text_widgets.dart';
 import 'package:flutter_application_1/constants/colors.dart';
 
 class ProductDetailScreen extends StatefulWidget {
